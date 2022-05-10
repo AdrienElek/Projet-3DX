@@ -161,13 +161,13 @@ MonoBehaviour:
   ground:
   - {fileID: 8157207942271112336, guid: a393a2b86ab4dd947b7ffeac76e85823, type: 3}
   perpective:
-  - {fileID: 267948462344438696, guid: 07ef042ef19fb72489a40073af192188, type: 3}
+  - {fileID: 8157207942271112336, guid: a393a2b86ab4dd947b7ffeac76e85823, type: 3}
   seGround:
   - {fileID: 8157207942271112336, guid: a393a2b86ab4dd947b7ffeac76e85823, type: 3}
-  player1: {fileID: 8188368342868022645, guid: 121527bd33595b94697b1340ad2bf237, type: 3}
-  player2: {fileID: 8188368342868022645, guid: 121527bd33595b94697b1340ad2bf237, type: 3}
+  player1: {fileID: 7435929898706618884, guid: 121527bd33595b94697b1340ad2bf237, type: 3}
+  player2: {fileID: 7435929898706618884, guid: 121527bd33595b94697b1340ad2bf237, type: 3}
   enemie:
-  - {fileID: 8188368342868022645, guid: 121527bd33595b94697b1340ad2bf237, type: 3}
+  - {fileID: 6478100227027613319, guid: 97d3d2836efd47142b097d7fadbb05cb, type: 3}
   boss:
   - {fileID: 8188368342868022645, guid: 121527bd33595b94697b1340ad2bf237, type: 3}
   trap:
