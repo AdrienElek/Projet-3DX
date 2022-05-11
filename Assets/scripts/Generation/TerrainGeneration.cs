@@ -207,7 +207,7 @@ public class TerrainGeneration : MonoBehaviour
 
                             case "SpawnP1":
                                 InstanciateSeGround();
-                                GameObject instancePlayer1 = Instantiate(player1, transform.position, Quaternion.identity);
+                                GameObject instancePlayer1 = Instantiate(player1, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
                                 
                                 instancePlayer1.transform.SetParent(boardHolderEntities);
                                 break;
