@@ -132,6 +132,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7b793af345e7c44a996f5faa8b10854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSpeed: 10
+  jumpHeight: 1
+  turnSpeed: 10
 --- !u!143 &8934190137007873878
 CharacterController:
   m_ObjectHideFlags: 0
@@ -260,6 +263,7 @@ GameObject:
   - component: {fileID: 5307394189419078168}
   - component: {fileID: 8260808395124403539}
   - component: {fileID: 5228789832186795150}
+  - component: {fileID: 3245011660465427067}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: Untagged
@@ -333,3 +337,17 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9211636434026927300}
   m_Enabled: 1
+--- !u!114 &3245011660465427067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9211636434026927300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cb2567326c07d44b804da471ccf58f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseSpeed: 1000
+  playerBody: {fileID: 2903638563362297485}

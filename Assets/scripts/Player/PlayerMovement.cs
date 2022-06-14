@@ -6,11 +6,11 @@ public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody rb;
     private CharacterController controller;
-    private float playerSpeed = 2.0f;
-    private float jumpHeight = 1.0f;
+    [SerializeField] private float playerSpeed = 2.0f;
+    [SerializeField] private float jumpHeight = 1.0f;
     private float gravityValue = -9.81f;
 
-    private float turnSpeed = 10.0f;
+    [SerializeField] private float turnSpeed = 10.0f;
 
     private void Start()
     {
@@ -20,6 +20,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        float x = Input.GetAxis("Horizontal");
+        float z = Input.GetAxis("Vertical");
+        Vector3 move = transform.right * x + transform.forward * z;
+        controller.Move(playerSpeed * Time.deltaTime * move);
+        /*
         float TurnInput = Input.GetAxis("Horizontal");
         if (TurnInput != 0f)
         {
@@ -31,6 +36,6 @@ public class PlayerMovement : MonoBehaviour
         {
             Vector3 verticalVelocity = Vector3.Project(rb.velocity, Vector3.up);
             rb.velocity = verticalVelocity + transform.forward * Mathf.Clamp(ForwardInput, -1f, 1f) * playerSpeed / 2f;
-        }
+        }*/
     }
 }
