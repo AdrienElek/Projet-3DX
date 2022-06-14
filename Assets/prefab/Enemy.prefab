@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8520906768298101875}
   - component: {fileID: 8135030863801375450}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: enemyCore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,8 +106,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2104602839783085397}
+  - component: {fileID: -1054770412618459305}
   m_Layer: 0
-  m_Name: ennemi
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -129,3 +130,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-1054770412618459305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6478100227027613319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 785d377748f8719448a5df659ed75289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 120
+  playerRef: {fileID: 7435929898706618884, guid: 121527bd33595b94697b1340ad2bf237, type: 3}
+  player: {fileID: 2903638563362297485, guid: 121527bd33595b94697b1340ad2bf237, type: 3}
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 64
+  obstructionMask:
+    serializedVersion: 2
+    m_Bits: 128
+  playerInSightRange: 0
+  playerInAttackRange: 0
+  radiusView: 7
+  radiusAttack: 4
+  angle: 100
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 5
+  timeBetweenAttacks: 0.5
