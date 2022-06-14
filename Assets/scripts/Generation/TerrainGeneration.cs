@@ -175,8 +175,10 @@ public class TerrainGeneration : MonoBehaviour
                             
                             case "C":
                                 InstanciateGround();
+                                blocPos = new Vector3(j*distanceBtwRooms + l, 1, -i*distanceBtwRooms - k);
+                                transform.position = blocPos;
                                 rand = Random.Range(0, chest.Length); //genere un nb random dans la liste des sols
-                                GameObject instanceChest = Instantiate(chest[rand], transform.position, Quaternion.identity);
+                                GameObject instanceChest = Instantiate(chest[rand], transform.position, Quaternion.Euler(0f, 0f, 90f));
 
                                 instanceChest.transform.SetParent(boardHolderOther);
                                 break;

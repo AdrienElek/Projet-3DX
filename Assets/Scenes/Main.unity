@@ -172,9 +172,9 @@ MonoBehaviour:
   - {fileID: 6478100227027613319, guid: 97d3d2836efd47142b097d7fadbb05cb, type: 3}
   trap:
   - {fileID: 8157207942271112336, guid: a393a2b86ab4dd947b7ffeac76e85823, type: 3}
-  exit: {fileID: 7435929898706618884, guid: 121527bd33595b94697b1340ad2bf237, type: 3}
+  exit: {fileID: 8157207942271112336, guid: a393a2b86ab4dd947b7ffeac76e85823, type: 3}
   chest:
-  - {fileID: 267948462344438696, guid: 07ef042ef19fb72489a40073af192188, type: 3}
+  - {fileID: 3453027202462708023, guid: 64aa0e4505a63447eac0c5857c8c7631, type: 3}
 --- !u!4 &75818483
 Transform:
   m_ObjectHideFlags: 0
