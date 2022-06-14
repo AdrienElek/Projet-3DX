@@ -7,10 +7,13 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rb;
     private CharacterController controller;
     [SerializeField] private float playerSpeed = 2.0f;
-    [SerializeField] private float jumpHeight = 1.0f;
-    private float gravityValue = -9.81f;
 
-    [SerializeField] private float turnSpeed = 10.0f;
+    [SerializeField] private float dashSpeed;
+    [SerializeField] private float dashTime;
+    [SerializeField] private float dashCoolDown;
+    public bool IFrame = false;
+    private float coolDown = 0;
+    
 
     private void Start()
     {
@@ -20,22 +23,40 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (coolDown != 0)
+        {
+            coolDown -= Time.deltaTime;
+            if (coolDown < 0)
+                coolDown = 0;
+        }
+            
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
         Vector3 move = transform.right * x + transform.forward * z;
-        controller.Move(playerSpeed * Time.deltaTime * move);
-        /*
-        float TurnInput = Input.GetAxis("Horizontal");
-        if (TurnInput != 0f)
+        if (Input.GetKeyDown("space"))
         {
-            float angle = Mathf.Clamp(TurnInput, -1f, 1f) * turnSpeed;
-            transform.Rotate(Vector3.up, Time.fixedDeltaTime * angle);
+            if (coolDown == 0)
+            {
+                coolDown = dashCoolDown;
+                StartCoroutine(Dash(x, z));
+            }
         }
-        float ForwardInput = Input.GetAxis("Vertical");
-        if (!Mathf.Approximately(ForwardInput, 0f))
+        else
+            controller.Move(playerSpeed * Time.deltaTime * move);
+    }
+
+    IEnumerator Dash(float x, float z)
+    {
+        float start = Time.time;
+        IFrame = true;
+
+        while (Time.time < start + dashTime)
         {
-            Vector3 verticalVelocity = Vector3.Project(rb.velocity, Vector3.up);
-            rb.velocity = verticalVelocity + transform.forward * Mathf.Clamp(ForwardInput, -1f, 1f) * playerSpeed / 2f;
-        }*/
+            Vector3 dashing = dashSpeed * x * transform.right + z * dashSpeed * transform.forward;
+            controller.Move(dashing * Time.deltaTime);
+            yield return null;
+        }
+
+        IFrame = false;
     }
 }
