@@ -8,7 +8,7 @@ public class Exit : MonoBehaviour
         void Start(){}
     private void OnControllerColliderHit(ControllerColliderHit coll)
     {
-        Debug.Log(coll.transform.tag);
+        //Debug.Log(coll.transform.tag);
         if (coll.transform.tag == "Exit")
         {
             Destroy(TerrainGeneration.boardHolderBlocks.gameObject);
