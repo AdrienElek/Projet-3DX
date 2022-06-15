@@ -18,15 +18,18 @@ public class RFistEvent : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.name);
-        if (other.name == "enemyCore")
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("FistAnimation"))
         {
-            Debug.Log(other.GameObject().transform.parent.GameObject().name);
-        }
-        else if (other.transform.CompareTag("Chest"))
-        {
-            Debug.Log("Chest hit");
-            other.GameObject().GetComponent<chest>().TakeDamage((int)stats.AttackPower);
+            if (other.name == "enemyCore")
+            {
+                other.GameObject().transform.parent.GameObject().GetComponent<EnemyFieldOfView>()
+                    .TakeDamage((int)stats.AttackPower);
+            }
+            else if (other.transform.CompareTag("Chest"))
+            {
+                Debug.Log("Chest hit");
+                other.GameObject().GetComponent<chest>().TakeDamage((int)stats.AttackPower);
+            }
         }
     }
 }

@@ -23,6 +23,7 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private float groundDistance;
     [SerializeField] private float jumpHeight;
     private float gameStart;
+    private bool attacking;
 
     private void Start()
     {
@@ -35,6 +36,11 @@ public class PlayerStats : MonoBehaviour
         timeInGame = Time.time - gameStart;
     }
 
+    public bool Attacking
+    {
+        get => attacking;
+        set => attacking = value;
+    }
     public float JumpHeight => jumpHeight;
     public float GroundDistance => groundDistance;
     public float Gravity => gravity;
