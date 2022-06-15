@@ -56,7 +56,7 @@ namespace LevelGen
                     }
                     else if (canvas[i, j] == "E")
                     {
-                        matrixPattern[i,j] = new Salle(Salle.EMPTY);
+                        matrixPattern[i,j] = new Salle(Salle.EMPTYBOSS);
                     }
                     else
                     {

@@ -205,6 +205,7 @@ MonoBehaviour:
   - {fileID: 8157207942271112336, guid: a393a2b86ab4dd947b7ffeac76e85823, type: 3}
   seGround:
   - {fileID: 1938677207389321834, guid: 8170d38fd17ca6d488d3682665b99685, type: 3}
+  seGroundBOSS: {fileID: 1938677207389321834, guid: 0ae52d9145bfca94ca3e5257c73fdbe3, type: 3}
   door: {fileID: 6220605279546193354, guid: 1b7109c81d38c304ebfe6e805ff99ee7, type: 3}
   player1: {fileID: 7435929898706618884, guid: 121527bd33595b94697b1340ad2bf237, type: 3}
   player2: {fileID: 7435929898706618884, guid: 121527bd33595b94697b1340ad2bf237, type: 3}
