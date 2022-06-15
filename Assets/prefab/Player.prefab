@@ -264,6 +264,7 @@ GameObject:
   - component: {fileID: 9001798288703799061}
   - component: {fileID: 6156187014143271770}
   - component: {fileID: 7259823704369363703}
+  - component: {fileID: 5422585598464030512}
   m_Layer: 5
   m_Name: healthBar
   m_TagString: Untagged
@@ -358,6 +359,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 6156187014143271770}
   stats: {fileID: 4832003420235097983}
+--- !u!114 &5422585598464030512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6209197354854826372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f10004dd024d145bb93af04e40c75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackPower: 0
+  playerSpeed: 0
+  maxHp: 0
+  dashSpeed: 0
+  dashTime: 0
+  dashCoolDown: 0
+  isInvincible: 0
+  mouseSpeedX: 0
+  mouseSpeedY: 0
+  timeInGame: 0
 --- !u!1 &6378451411545675668
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,7 +495,7 @@ Transform:
   m_GameObject: {fileID: 7435929898706618884}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.6}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4693332113775774004}
