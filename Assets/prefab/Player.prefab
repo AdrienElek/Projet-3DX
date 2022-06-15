@@ -200,6 +200,9 @@ MonoBehaviour:
   dashTime: 0.2
   dashCoolDown: 2
   isInvincible: 0
+  mouseSpeedX: 150
+  mouseSpeedY: 100
+  timeInGame: 0
 --- !u!1 &7537674862976965530
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,8 +384,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cb2567326c07d44b804da471ccf58f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSpeed: 500
+  mouseSpeed: 200
   playerBody: {fileID: 2903638563362297485}
+  stats: {fileID: 4832003420235097983}
 --- !u!1001 &968420489998686020
 PrefabInstance:
   m_ObjectHideFlags: 0

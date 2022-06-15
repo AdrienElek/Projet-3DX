@@ -14,6 +14,8 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private float dashTime;
     [SerializeField] private float dashCoolDown;
     [SerializeField] private bool isInvincible;
+    [SerializeField] private float mouseSpeedX;
+    [SerializeField] private float mouseSpeedY;
     private float enemyKilled;
     [SerializeField] private float timeInGame;
     private float gameStart;
@@ -61,4 +63,8 @@ public class PlayerStats : MonoBehaviour
         get => enemyKilled;
         set => enemyKilled = value;
     }
+
+    public float MouseSpeedX => mouseSpeedX;
+
+    public float MouseSpeedY => mouseSpeedY;
 }
