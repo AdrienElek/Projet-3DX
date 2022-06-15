@@ -12,9 +12,15 @@ public class PlayerManager : MonoBehaviour
     {
         stats.Hp -= damage;
         hud.SetHealth(stats.Hp);
+        if (stats.Hp == 0)
+        {
+            restart();   
+        }
+            
     }
     public void restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        UnityEngine.Cursor.lockState = CursorLockMode.None;
+        SceneManager.LoadScene("MainMenu");
     }
 }
