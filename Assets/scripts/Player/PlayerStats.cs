@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,21 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private float dashTime;
     [SerializeField] private float dashCoolDown;
     [SerializeField] private bool isInvincible;
+    private float enemyKilled;
+    [SerializeField] private float timeInGame;
+    private float gameStart;
+
+    private void Start()
+    {
+        gameStart = Time.time;
+    }
+
+    private void Update()
+    {
+        timeInGame = Time.time - gameStart;
+    }
+
+    public float TimeInGame => timeInGame;
 
     public float Hp
     {
@@ -38,5 +54,11 @@ public class PlayerStats : MonoBehaviour
     {
         get => isInvincible;
         set => isInvincible = value;
+    }
+
+    public float EnemyKilled
+    {
+        get => enemyKilled;
+        set => enemyKilled = value;
     }
 }
