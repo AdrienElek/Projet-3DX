@@ -42,7 +42,6 @@ public class PlayerMovement : MonoBehaviour
         Vector3 move = transform.right * x + transform.forward * z;
         if (Input.GetKeyDown("space"))
         {
-            manager.TakeDamage(30);
             if (coolDown == 0)
             {
                 coolDown = stats.DashCoolDown;
