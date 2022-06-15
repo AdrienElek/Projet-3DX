@@ -132,14 +132,14 @@ namespace LevelGen
 
         public static string[,] EMPTYBOSS =
             {{"n", "n", "n", "n", "n", "n", "n", "n", "n", "n"},
-            {"n", "SEBlocks", "n", "n", "n", "n", "n", "n", "SEBlocks", "n"},
-            {"n", "n", "SEBlocks", "n", "n", "n", "n", "SEBlocks", "n", "n"},
-            {"n", "n", "n", "SEBlocks", "n", "n", "SEBlocks", "n", "n", "n"},
-            {"n", "n", "n", "n", "SEBlocks", "SEBlocks", "n", "n", "n", "n"},
-            {"n", "n", "n", "n", "SEBlocks", "SEBlocks", "n", "n", "n", "n"},
-            {"n", "n", "n", "SEBlocks", "n", "n", "SEBlocks", "n", "n", "n"},
-            {"n", "n", "SEBlocks", "n", "n", "n", "n", "SEBlocks", "n", "n"},
-            {"n", "SEBlocks", "n", "n", "n", "n", "n", "n", "SEBlocks", "n"},
+            {"n", "SEBlocksBOSS", "n", "n", "n", "n", "n", "n", "SEBlocksBOSS", "n"},
+            {"n", "n", "SEBlocksBOSS", "n", "n", "n", "n", "SEBlocksBOSS", "n", "n"},
+            {"n", "n", "n", "SEBlocksBOSS", "n", "n", "SEBlocksBOSS", "n", "n", "n"},
+            {"n", "n", "n", "n", "SEBlocksBOSS", "SEBlocksBOSS", "n", "n", "n", "n"},
+            {"n", "n", "n", "n", "SEBlocksBOSS", "SEBlocksBOSS", "n", "n", "n", "n"},
+            {"n", "n", "n", "SEBlocksBOSS", "n", "n", "SEBlocksBOSS", "n", "n", "n"},
+            {"n", "n", "SEBlocksBOSS", "n", "n", "n", "n", "SEBlocksBOSS", "n", "n"},
+            {"n", "SEBlocksBOSS", "n", "n", "n", "n", "n", "n", "SEBlocksBOSS", "n"},
             {"n", "n", "n", "n", "n", "n", "n", "n", "n", "n"}};
 
         //Spawn Room
