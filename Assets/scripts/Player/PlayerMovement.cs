@@ -28,7 +28,6 @@ public class PlayerMovement : MonoBehaviour
         isGrounded = Physics.CheckSphere(groundCheck.position, stats.GroundDistance, groundMask);
         if (isGrounded && velocity.y < 0)
         {
-            Debug.Log("Gravity stop");
             velocity.y = -2f;
         }
         if (coolDown != 0)
@@ -43,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 move = transform.right * x + transform.forward * z;
         if (Input.GetKeyDown("space"))
         {
+            manager.TakeDamage(30);
             if (coolDown == 0)
             {
                 coolDown = stats.DashCoolDown;
@@ -54,9 +54,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown("c") && isGrounded)
         {
-            Debug.Log("Jumping");
             velocity.y = Mathf.Sqrt(stats.JumpHeight * -2f * stats.Gravity);
-            Debug.Log(velocity.y);
         } 
         velocity.y += stats.Gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);

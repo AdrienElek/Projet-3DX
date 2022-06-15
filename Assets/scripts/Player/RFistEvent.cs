@@ -7,7 +7,7 @@ using UnityEngine;
 public class RFistEvent : MonoBehaviour
 {
     [SerializeField] private Animator anim;
-    [SerializeField] private float damage;
+    [SerializeField] private PlayerStats stats;
     
     
     void Update()
@@ -18,9 +18,15 @@ public class RFistEvent : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other.name);
         if (other.name == "enemyCore")
         {
             Debug.Log(other.GameObject().transform.parent.GameObject().name);
+        }
+        else if (other.transform.CompareTag("Chest"))
+        {
+            Debug.Log("Chest hit");
+            other.GameObject().GetComponent<chest>().TakeDamage((int)stats.AttackPower);
         }
     }
 }
