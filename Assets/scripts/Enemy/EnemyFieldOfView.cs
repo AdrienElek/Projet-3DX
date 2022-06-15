@@ -8,7 +8,7 @@ public class EnemyFieldOfView : MonoBehaviour
     [SerializeField] private EnemyStats enemyStats;
 
     public GameObject playerRef;
-    [SerializeField] private PlayerManager playerManager;
+    public PlayerManager playerManager;
 
     public LayerMask targetMask;
     public LayerMask obstructionMask;
@@ -30,6 +30,7 @@ public class EnemyFieldOfView : MonoBehaviour
     private void Start()
     {
         playerRef = GameObject.FindGameObjectWithTag("Player");
+        playerManager = playerRef.GetComponent<PlayerManager>();
         if (playerRef == null)
             Debug.Log("no player");
         StartCoroutine(FOVRoutine());
@@ -41,13 +42,9 @@ public class EnemyFieldOfView : MonoBehaviour
         // Check for sight and attack range
         playerInAttackRange = Physics.CheckSphere(transform.position, radiusAttack, targetMask);
 
-        if (!playerInSightRange && !playerInAttackRange)
-        {
-            //Patroling();
-        }
         if (playerInSightRange && !playerInAttackRange)
         {
-            Chase();
+            Invoke(nameof(Chase), enemyStats.TimeBetweenAttacks);
         }
         if (playerInAttackRange && playerInSightRange)
         {
@@ -55,28 +52,6 @@ public class EnemyFieldOfView : MonoBehaviour
         }
     }
 
-    /*
-    private void Patroling()
-    {
-        Vector3 distanceToWalkPoint = transform.position - walkPoint;
-
-        // Walkpoint reached
-        if (distanceToWalkPoint.magnitude < 1f)
-            walkPointSet = false;
-    }
-
-    private void SearchWalkPoint()
-    {
-        // Calculate random point in range
-        float randomZ = UnityEngine.Random.Range(-walkPointRange, walkPointRange);
-        float randomX = UnityEngine.Random.Range(-walkPointRange, walkPointRange);
-
-        walkPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
-
-        if (Physics.Raycast(walkPoint, -transform.up, 2f, obstructionMask))
-            walkPointSet = true;
-    }
-    */
     private void Chase()
     {
         transform.LookAt(playerRef.transform);
@@ -100,7 +75,6 @@ public class EnemyFieldOfView : MonoBehaviour
             Collider[] colliders = Physics.OverlapSphere(transform.position, radiusAttack, targetMask);
             if (colliders.Length > 0)
             {
-                Debug.Log("I hit");
                 playerManager.TakeDamage(enemyStats.AttackPower);
             }
             ///
