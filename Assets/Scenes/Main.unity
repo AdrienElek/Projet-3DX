@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AverageMatrixLength: 5
-  level: 3
+  level: 1
   wall:
   - {fileID: 2513951481362443792, guid: f0e9d4c36817fb64d8756f1f6e60a8e2, type: 3}
   - {fileID: 2513951481362443792, guid: 23e04763b1db12849b0aecab6b711af4, type: 3}
@@ -191,7 +191,7 @@ MonoBehaviour:
   - {fileID: 8157207942271112336, guid: a393a2b86ab4dd947b7ffeac76e85823, type: 3}
   - {fileID: 8157207942271112336, guid: a393a2b86ab4dd947b7ffeac76e85823, type: 3}
   - {fileID: 8157207942271112336, guid: a393a2b86ab4dd947b7ffeac76e85823, type: 3}
-  - {fileID: 8157207942271112336, guid: 81355673d653f3d44b83002ee4c81ed8, type: 3}
+  - {fileID: 4009551785352608199, guid: 9ff035d655e6cc444972ebcc77572c09, type: 3}
   - {fileID: 8157207942271112336, guid: 3ff1446df0dff0446b9f79105584274c, type: 3}
   - {fileID: 8157207942271112336, guid: a393a2b86ab4dd947b7ffeac76e85823, type: 3}
   - {fileID: 8157207942271112336, guid: a393a2b86ab4dd947b7ffeac76e85823, type: 3}
