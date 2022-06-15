@@ -28,8 +28,8 @@ namespace LevelGen
             }
             else
             {
-                this.matrixLength = 2;
-                matrixPattern = new Salle[this.matrixLength, this.matrixLength];
+                this.matrixLength = 5;
+                matrixPattern = new Salle[5, 5];
                 BossRoom();
             }
         }
@@ -39,26 +39,46 @@ namespace LevelGen
         //Creation de Salle de Boss
         public void BossRoom()
         {
-            for (int i = 0; i < matrixLength; i++)
+            string[,] canvas = {
+                {"E", "E", "E", "F", "F"},
+                {"E", "E", "E", "O", "E"},
+                {"E", "E", "E", "F", "F"},
+                {"F", "F", "F", "F", "F"},
+                {"F", "F", "F", "F", "F"},
+            };
+            for (int i = 0; i < 5; i++)
             {
-                for (int j = 0; j < matrixLength; j++)
+                for (int j = 0; j < 5; j++)
                 {
-                    matrixPattern[i,j] = new Salle(Salle.EMPTY);
+                    if (canvas[i, j] == "F")
+                    {
+                        matrixPattern[i,j] = new Salle(Salle.FULL);
+                    }
+                    else if (canvas[i, j] == "E")
+                    {
+                        matrixPattern[i,j] = new Salle(Salle.EMPTY);
+                    }
+                    else
+                    {
+                        matrixPattern[i,j] = new Salle(Salle.BOSSDOOR);
+                    }
                 }
             }
             
-            matrixPattern[1, 1].Pattern[5, 5] = "BOSS";
+            matrixPattern[1, 0].Pattern[5, 5] = "BOSS";
+            matrixPattern[1, 3].Pattern[5, 0] = "RP";
+            matrixPattern[1, 3].Pattern[4, 0] = "LP";
+
             
             if (nbJoueur == 1)
             {
-                matrixPattern[0, 0].Pattern[5, 4] = "SpawnP1";
+                matrixPattern[1, 4].Pattern[4, 4] = "SpawnP1";
             }
             else
             {
                 matrixPattern[0, 0].Pattern[5, 4] = "SpawnP1";
                 matrixPattern[0, 0].Pattern[5, 6] = "SpawnP2";
             }
-            SpawnPerspective();
         }
         
         //Création de Salle Normal
