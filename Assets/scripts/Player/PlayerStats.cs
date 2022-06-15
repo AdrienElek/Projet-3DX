@@ -7,8 +7,9 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
     [SerializeField] private float attackPower;
-    [SerializeField] private float hp;
+    private float hp;
     [SerializeField] private float playerSpeed;
+    [SerializeField] private float maxHp;
 
     [SerializeField] private float dashSpeed;
     [SerializeField] private float dashTime;
@@ -23,6 +24,7 @@ public class PlayerStats : MonoBehaviour
     private void Start()
     {
         gameStart = Time.time;
+        hp = maxHp;
     }
 
     private void Update()
@@ -30,12 +32,13 @@ public class PlayerStats : MonoBehaviour
         timeInGame = Time.time - gameStart;
     }
 
+    public float MaxHp => maxHp;
     public float TimeInGame => timeInGame;
 
     public float Hp
     {
         get => hp;
-        set => hp = value;
+        set => hp = Math.Max(value, 0);
     }
 
     public float AttackPower
