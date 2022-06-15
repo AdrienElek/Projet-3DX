@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 8934190137007873878}
   - component: {fileID: 4462648595289706129}
   - component: {fileID: 1007705728597534585}
+  - component: {fileID: 4832003420235097983}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -133,11 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7b793af345e7c44a996f5faa8b10854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 7
-  dashSpeed: 10
-  dashTime: 0.2
-  dashCoolDown: 2
-  IFrame: 0
+  stats: {fileID: 4832003420235097983}
 --- !u!143 &8934190137007873878
 CharacterController:
   m_ObjectHideFlags: 0
@@ -184,6 +181,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cdc8aaefb9c35647b0340d7c57c74af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4832003420235097983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7435929898706618884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f10004dd024d145bb93af04e40c75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackPower: 10
+  hp: 10
+  playerSpeed: 5
+  dashSpeed: 10
+  dashTime: 0.2
+  dashCoolDown: 2
+  isInvincible: 0
 --- !u!1 &7537674862976965530
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,20 +462,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1381989502469514, guid: d2959226abee63e42afe64c17736919a, type: 3}
   m_PrefabInstance: {fileID: 968420489998686020}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7938739069436849701
-MonoBehaviour:
+--- !u!65 &9160094078328659955
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 969520386015498958}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7921b362706161c45a390f6189320371, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 3652235773428718601}
-  damage: 0
+  serializedVersion: 2
+  m_Size: {x: 0.39104658, y: 1.2245606, z: 6.404908}
+  m_Center: {x: 0.00000051409006, y: 0.0000006854534, z: 1.5982933}
 --- !u!95 &3652235773428718601
 Animator:
   serializedVersion: 4
@@ -480,16 +495,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &9160094078328659955
-BoxCollider:
+--- !u!114 &7938739069436849701
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 969520386015498958}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.39104658, y: 1.2245606, z: 6.404908}
-  m_Center: {x: 0.00000051409006, y: 0.0000006854534, z: 1.5982933}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7921b362706161c45a390f6189320371, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 3652235773428718601}
+  damage: 0

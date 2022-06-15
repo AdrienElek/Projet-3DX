@@ -2,16 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(PlayerStats))]
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] private PlayerStats stats;
     private Rigidbody rb;
     private CharacterController controller;
-    [SerializeField] private float playerSpeed = 2.0f;
-
-    [SerializeField] private float dashSpeed;
-    [SerializeField] private float dashTime;
-    [SerializeField] private float dashCoolDown;
-    public bool IFrame = false;
     private float coolDown = 0;
     
 
@@ -37,26 +33,26 @@ public class PlayerMovement : MonoBehaviour
         {
             if (coolDown == 0)
             {
-                coolDown = dashCoolDown;
+                coolDown = stats.DashCoolDown;
                 StartCoroutine(Dash(x, z));
             }
         }
         else
-            controller.Move(playerSpeed * Time.deltaTime * move);
+            controller.Move(stats.PlayerSpeed * Time.deltaTime * move);
     }
 
     IEnumerator Dash(float x, float z)
     {
         float start = Time.time;
-        IFrame = true;
+        stats.IsInvincible = true;
 
-        while (Time.time < start + dashTime)
+        while (Time.time < start + stats.DashTime)
         {
-            Vector3 dashing = dashSpeed * x * transform.right + z * dashSpeed * transform.forward;
+            Vector3 dashing = stats.DashSpeed * x * transform.right + z * stats.DashSpeed * transform.forward;
             controller.Move(dashing * Time.deltaTime);
             yield return null;
         }
 
-        IFrame = false;
+        stats.IsInvincible = false;
     }
 }
