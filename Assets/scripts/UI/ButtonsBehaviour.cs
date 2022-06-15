@@ -1,0 +1,31 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+//ADRIEN LORGE
+public class ButtonsBehaviour : MonoBehaviour
+{
+
+    public void Quit_The_Game()
+    {
+        Application.Quit();//Not used
+    }
+
+    public void Play1()
+    {
+        TerrainGeneration.nombreJoueur = 1;
+        SceneManager.LoadScene("Main");
+    }
+
+    public void Play2()
+    {
+        TerrainGeneration.nombreJoueur = 2;
+        SceneManager.LoadScene("Game");
+    }
+
+    public void Parametre_Sound()
+    {
+        
+    }
+    
+}
