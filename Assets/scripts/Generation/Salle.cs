@@ -130,6 +130,18 @@ namespace LevelGen
             {"W", "n", "n", "n", "n", "n", "n", "n", "n", "n"},
             {"W", "n", "n", "n", "n", "n", "n", "n", "n", "n"}};
 
+        public static string[,] EMPTYBOSS =
+            {{"n", "n", "n", "n", "n", "n", "n", "n", "n", "n"},
+            {"n", "SEBlocks", "n", "n", "n", "n", "n", "n", "SEBlocks", "n"},
+            {"n", "n", "SEBlocks", "n", "n", "n", "n", "SEBlocks", "n", "n"},
+            {"n", "n", "n", "SEBlocks", "n", "n", "SEBlocks", "n", "n", "n"},
+            {"n", "n", "n", "n", "SEBlocks", "SEBlocks", "n", "n", "n", "n"},
+            {"n", "n", "n", "n", "SEBlocks", "SEBlocks", "n", "n", "n", "n"},
+            {"n", "n", "n", "SEBlocks", "n", "n", "SEBlocks", "n", "n", "n"},
+            {"n", "n", "SEBlocks", "n", "n", "n", "n", "SEBlocks", "n", "n"},
+            {"n", "SEBlocks", "n", "n", "n", "n", "n", "n", "SEBlocks", "n"},
+            {"n", "n", "n", "n", "n", "n", "n", "n", "n", "n"}};
+
         //Spawn Room
         public static string[,] SPW2 =
             {{"W", "W", "W", "W", "W", "W", "W", "W", "W", "W"},

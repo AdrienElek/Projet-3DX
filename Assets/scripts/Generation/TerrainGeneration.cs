@@ -37,6 +37,7 @@ public class TerrainGeneration : MonoBehaviour
     public GameObject[] ground;
     public GameObject[] perpective;
     public GameObject[] seGround;
+    public GameObject seGroundBOSS;
     public GameObject door;
     
     //Entitées
@@ -137,6 +138,11 @@ public class TerrainGeneration : MonoBehaviour
             
             instanceSpawnGround.transform.SetParent(boardHolderBlocks);
         }
+        void InstanciateSeBOSSGround()
+        {
+            GameObject instanceSpawnGround = Instantiate(seGroundBOSS, transform.position, Quaternion.identity);
+            instanceSpawnGround.transform.SetParent(boardHolderBlocks);
+        }
         
         
         //Instanciation des blocs
@@ -235,7 +241,9 @@ public class TerrainGeneration : MonoBehaviour
                             case "SEBlocks":
                                 InstanciateSeGround();
                                 break;
-                            
+                            case "SEBlocksBOSS":
+                                InstanciateSeBOSSGround();
+                                break;                            
                             case "EXIT":
                                 InstanciateSeGround();
                                 GameObject instanceExit = Instantiate(exit, transform.position, Quaternion.identity);
