@@ -8,7 +8,7 @@ public class EnemyFieldOfView : MonoBehaviour
     [SerializeField] private EnemyStats enemyStats;
 
     public GameObject playerRef;
-    public Transform player;
+    [SerializeField] private PlayerManager playerManager;
 
     public LayerMask targetMask;
     public LayerMask obstructionMask;
@@ -97,6 +97,12 @@ public class EnemyFieldOfView : MonoBehaviour
         if (!alreadyAttacked)
         {
             /// Attack code here
+            Collider[] colliders = Physics.OverlapSphere(transform.position, radiusAttack, targetMask);
+            if (colliders.Length > 0)
+            {
+                Debug.Log("I hit");
+                playerManager.TakeDamage(enemyStats.AttackPower);
+            }
             ///
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), enemyStats.TimeBetweenAttacks);

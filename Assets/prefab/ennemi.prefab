@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1805365849882960912}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.68, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -92,7 +92,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1805365849882960912}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyStats: {fileID: 5812399796572158227}
   playerRef: {fileID: 7435929898706618884, guid: 121527bd33595b94697b1340ad2bf237, type: 3}
-  player: {fileID: 2903638563362297485, guid: 121527bd33595b94697b1340ad2bf237, type: 3}
+  playerManager: {fileID: 5873755548581937851, guid: 121527bd33595b94697b1340ad2bf237, type: 3}
   targetMask:
     serializedVersion: 2
     m_Bits: 64
@@ -155,10 +155,10 @@ MonoBehaviour:
   playerInSightRange: 0
   playerInAttackRange: 0
   radiusView: 7
-  radiusAttack: 4
+  radiusAttack: 2
   angle: 100
-  walkPoint: {x: 0, y: 0, z: 0}
-  walkPointRange: 120
+  MaxDist: 7
+  MinDist: -0.5
 --- !u!114 &5812399796572158227
 MonoBehaviour:
   m_ObjectHideFlags: 0
