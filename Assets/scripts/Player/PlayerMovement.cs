@@ -6,7 +6,6 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private PlayerStats stats;
-    [SerializeField] private PlayerManager manager;
     private Rigidbody rb;
     private CharacterController controller;
     private float coolDown = 0;
