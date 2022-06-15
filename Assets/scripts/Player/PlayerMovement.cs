@@ -7,9 +7,14 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private PlayerStats stats;
     [SerializeField] private PlayerManager manager;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private LayerMask groundMask;
+    
+    private bool isGrounded;
     private Rigidbody rb;
     private CharacterController controller;
     private float coolDown = 0;
+    private Vector3 velocity;
     
 
     private void Start()
@@ -20,6 +25,12 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        isGrounded = Physics.CheckSphere(groundCheck.position, stats.GroundDistance, groundMask);
+        if (isGrounded && velocity.y < 0)
+        {
+            Debug.Log("Gravity stop");
+            velocity.y = -2f;
+        }
         if (coolDown != 0)
         {
             coolDown -= Time.deltaTime;
@@ -40,6 +51,15 @@ public class PlayerMovement : MonoBehaviour
         }
         else
             controller.Move(stats.PlayerSpeed * Time.deltaTime * move);
+
+        if (Input.GetKeyDown("c") && isGrounded)
+        {
+            Debug.Log("Jumping");
+            velocity.y = Mathf.Sqrt(stats.JumpHeight * -2f * stats.Gravity);
+            Debug.Log(velocity.y);
+        } 
+        velocity.y += stats.Gravity * Time.deltaTime;
+        controller.Move(velocity * Time.deltaTime);
     }
 
     IEnumerator Dash(float x, float z)
