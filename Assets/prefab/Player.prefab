@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7041359082929222357}
   - component: {fileID: 572890633946517474}
   - component: {fileID: 6167918846737610815}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,8 +96,12 @@ GameObject:
   - component: {fileID: 8934190137007873878}
   - component: {fileID: 4462648595289706129}
   - component: {fileID: 1007705728597534585}
+<<<<<<< HEAD
+  m_Layer: 6
+=======
   - component: {fileID: 4832003420235097983}
   m_Layer: 0
+>>>>>>> 32b20f35f8e321ae7139a8d40b7ffa5ae1d7b289
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -214,7 +218,7 @@ GameObject:
   - component: {fileID: 4693332113775774004}
   - component: {fileID: 6861575277380045034}
   - component: {fileID: 2171076078347590825}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -298,7 +302,7 @@ GameObject:
   - component: {fileID: 8260808395124403539}
   - component: {fileID: 5228789832186795150}
   - component: {fileID: 3245011660465427067}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MainCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
