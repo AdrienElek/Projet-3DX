@@ -106,6 +106,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2104602839783085397}
+  - component: {fileID: 5795673458006350466}
+  - component: {fileID: 5812399796572158227}
   m_Layer: 0
   m_Name: ennemi
   m_TagString: Untagged
@@ -129,3 +131,47 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5795673458006350466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6478100227027613319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7192e8d242055b24781cd015d1e49b83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyStats: {fileID: 5812399796572158227}
+  playerRef: {fileID: 7435929898706618884, guid: 121527bd33595b94697b1340ad2bf237, type: 3}
+  player: {fileID: 2903638563362297485, guid: 121527bd33595b94697b1340ad2bf237, type: 3}
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 64
+  obstructionMask:
+    serializedVersion: 2
+    m_Bits: 128
+  playerInSightRange: 0
+  playerInAttackRange: 0
+  radiusView: 7
+  radiusAttack: 4
+  angle: 100
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 120
+--- !u!114 &5812399796572158227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6478100227027613319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a03072b457f2ba74e92d9df2c3e89a55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackPower: 15
+  enemySpeed: 20
+  maxHp: 100
+  timeBetweenAttacks: 2
