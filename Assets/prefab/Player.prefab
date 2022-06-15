@@ -412,7 +412,9 @@ MonoBehaviour:
   isInvincible: 0
   mouseSpeedX: 0
   mouseSpeedY: 0
-  timeInGame: 0
+  gravity: 0
+  groundDistance: 0
+  jumpHeight: 0
 --- !u!1 &6378451411545675668
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,7 +442,7 @@ Transform:
   m_GameObject: {fileID: 6378451411545675668}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1.42, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalScale: {x: 0.459992, y: 0.3065208, z: 0.52841604}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2903638563362297485}
@@ -983,3 +985,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 3652235773428718601}
   damage: 0
+  stats: {fileID: 4832003420235097983}
