@@ -107,6 +107,40 @@ namespace LevelGen
             {"n", "n", "n", "n", "n", "n", "n", "n", "n", "n"},
             {"n", "n", "n", "n", "n", "n", "n", "n", "n", "n"},
             {"n", "n", "n", "n", "n", "n", "n", "n", "n", "n"}};
+        public static string[,] FULL =
+            {{"W", "W", "W", "W", "W", "W", "W", "W", "W", "W"},
+            {"W", "W", "W", "W", "W", "W", "W", "W", "W", "W"},
+            {"W", "W", "W", "W", "W", "W", "W", "W", "W", "W"},
+            {"W", "W", "W", "W", "W", "W", "W", "W", "W", "W"},
+            {"W", "W", "W", "W", "W", "W", "W", "W", "W", "W"},
+            {"W", "W", "W", "W", "W", "W", "W", "W", "W", "W"},
+            {"W", "W", "W", "W", "W", "W", "W", "W", "W", "W"},
+            {"W", "W", "W", "W", "W", "W", "W", "W", "W", "W"},
+            {"W", "W", "W", "W", "W", "W", "W", "W", "W", "W"},
+            {"W", "W", "W", "W", "W", "W", "W", "W", "W", "W"}};
+        public static string[,] BOSSDOOR =
+            {{"W", "n", "n", "n", "n", "n", "n", "n", "n", "n"},
+            {"W", "n", "n", "n", "n", "n", "n", "n", "n", "n"},
+            {"W", "n", "n", "n", "n", "n", "n", "n", "n", "n"},
+            {"W", "n", "n", "n", "n", "n", "n", "n", "n", "n"},
+            {"W", "n", "n", "n", "n", "n", "n", "n", "n", "n"},
+            {"W", "n", "n", "n", "n", "n", "n", "n", "n", "n"},
+            {"W", "n", "n", "n", "n", "n", "n", "n", "n", "n"},
+            {"W", "n", "n", "n", "n", "n", "n", "n", "n", "n"},
+            {"W", "n", "n", "n", "n", "n", "n", "n", "n", "n"},
+            {"W", "n", "n", "n", "n", "n", "n", "n", "n", "n"}};
+
+        public static string[,] EMPTYBOSS =
+            {{"n", "n", "n", "n", "n", "n", "n", "n", "n", "n"},
+            {"n", "SEBlocks", "n", "n", "n", "n", "n", "n", "SEBlocks", "n"},
+            {"n", "n", "SEBlocks", "n", "n", "n", "n", "SEBlocks", "n", "n"},
+            {"n", "n", "n", "SEBlocks", "n", "n", "SEBlocks", "n", "n", "n"},
+            {"n", "n", "n", "n", "SEBlocks", "SEBlocks", "n", "n", "n", "n"},
+            {"n", "n", "n", "n", "SEBlocks", "SEBlocks", "n", "n", "n", "n"},
+            {"n", "n", "n", "SEBlocks", "n", "n", "SEBlocks", "n", "n", "n"},
+            {"n", "n", "SEBlocks", "n", "n", "n", "n", "SEBlocks", "n", "n"},
+            {"n", "SEBlocks", "n", "n", "n", "n", "n", "n", "SEBlocks", "n"},
+            {"n", "n", "n", "n", "n", "n", "n", "n", "n", "n"}};
 
         //Spawn Room
         public static string[,] SPW2 =

@@ -37,6 +37,8 @@ public class TerrainGeneration : MonoBehaviour
     public GameObject[] ground;
     public GameObject[] perpective;
     public GameObject[] seGround;
+    public GameObject seGroundBOSS;
+    public GameObject door;
     
     //Entitées
     [Header("ENTITEES")]
@@ -115,6 +117,11 @@ public class TerrainGeneration : MonoBehaviour
                             
             instanceWall.transform.SetParent(boardHolderBlocks);
         }
+        void InstanciateDoor()
+        {
+            GameObject instanceDoor = Instantiate(door, transform.position + new Vector3(0, 0.5f, 0.5f), Quaternion.identity);
+            instanceDoor.transform.SetParent(boardHolderBlocks);
+        }
         
         void InstanciateGround()
         {
@@ -129,6 +136,11 @@ public class TerrainGeneration : MonoBehaviour
             int rand = Random.Range(0, seGround.Length);
             GameObject instanceSpawnGround = Instantiate(seGround[rand], transform.position, Quaternion.identity);
             
+            instanceSpawnGround.transform.SetParent(boardHolderBlocks);
+        }
+        void InstanciateSeBOSSGround()
+        {
+            GameObject instanceSpawnGround = Instantiate(seGroundBOSS, transform.position, Quaternion.identity);
             instanceSpawnGround.transform.SetParent(boardHolderBlocks);
         }
         
@@ -153,7 +165,12 @@ public class TerrainGeneration : MonoBehaviour
                             case "n":
                                 InstanciateGround();
                                 break;
-                            
+                            case "RP":
+                                Debug.Log("RightDoor");
+                                InstanciateDoor();
+                                break;
+                            case "LP":
+                                break;
                             case "W":
                                 InstanciateWall();
                                 break;
@@ -224,7 +241,9 @@ public class TerrainGeneration : MonoBehaviour
                             case "SEBlocks":
                                 InstanciateSeGround();
                                 break;
-                            
+                            case "SEBlocksBOSS":
+                                InstanciateSeBOSSGround();
+                                break;                            
                             case "EXIT":
                                 InstanciateSeGround();
                                 GameObject instanceExit = Instantiate(exit, transform.position, Quaternion.identity);
