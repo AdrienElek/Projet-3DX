@@ -18,7 +18,10 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private float mouseSpeedX;
     [SerializeField] private float mouseSpeedY;
     private float enemyKilled;
-    [SerializeField] private float timeInGame;
+    private float timeInGame;
+    [SerializeField] private float gravity;
+    [SerializeField] private float groundDistance;
+    [SerializeField] private float jumpHeight;
     private float gameStart;
 
     private void Start()
@@ -31,6 +34,10 @@ public class PlayerStats : MonoBehaviour
     {
         timeInGame = Time.time - gameStart;
     }
+
+    public float JumpHeight => jumpHeight;
+    public float GroundDistance => groundDistance;
+    public float Gravity => gravity;
 
     public float MaxHp => maxHp;
     public float TimeInGame => timeInGame;
