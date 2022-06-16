@@ -2,7 +2,7 @@ Le jeu est un Donjon Labyrinthe dans le genre rogue like.
 Le but est de passer le plus de niveau possible en trouvant la sortie.
 
 INPUT:
-- Deplacements: wasd
+- Deplacements: wasd / fleches
 - Saut: C
 - Dash: Space
 - Attaque: Clic souris
