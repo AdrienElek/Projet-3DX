@@ -11,6 +11,7 @@ DETAILS:
 - Les niveaux hors salles des boss sont générés aléatoirement tout en garentissant qu'il existe 
 au moins un chemin possible entre le Spawn et l'Exit
 - Les enemies sont les boules rouges et peuvent nous tuer en mettant à 0 la barre rouge
+- Le dash ne peut pas etre utilisé sans bouger
 affiché à l'écran
 - le premier niveau est un niveau normal, celui d'apres un niveau de boss
 - Les coffres sont cassables si on les attaques collé avec le couteau
