@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8427043448135246040}
+  - component: {fileID: 7011447795529335303}
+  - component: {fileID: 6252951468270520479}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -32,6 +34,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7011447795529335303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869334828829330731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a03072b457f2ba74e92d9df2c3e89a55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackPower: 10
+  enemySpeed: 11
+  maxHp: 130
+  timeBetweenAttacks: 4
+--- !u!114 &6252951468270520479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869334828829330731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7192e8d242055b24781cd015d1e49b83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyStats: {fileID: 7011447795529335303}
+  playerRef: {fileID: 7435929898706618884, guid: 121527bd33595b94697b1340ad2bf237, type: 3}
+  playerManager: {fileID: 5873755548581937851, guid: 121527bd33595b94697b1340ad2bf237, type: 3}
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 64
+  obstructionMask:
+    serializedVersion: 2
+    m_Bits: 128
+  playerInSightRange: 0
+  playerInAttackRange: 0
+  radiusView: 9
+  radiusAttack: 3
+  angle: 120
+  MaxDist: 9
+  MinDist: 1
 --- !u!1 &2979113962994978894
 GameObject:
   m_ObjectHideFlags: 0
